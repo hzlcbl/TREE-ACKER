@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "Etna";
+    src: url("etna-free-font.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Etna", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url(mainpagebg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(81, 106, 52, 0.8);
+    border-radius: 10px;
+}
+
+.logo {
+    width: 80px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #516a34;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+input {
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    outline: none;
+    width: 150px;
+}
+
+button {
+    background: #3a531f;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: #dfe0cb;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #516a34;
+}
+
+.logout {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* MAIN SECTIONS */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tree-info, .status-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.tree {
+    width: 80px;
+}
+
+.tree1 {
+    font-size: 1.8rem;
+    color: #3a531f;
+}
+
+.location, .secure {
+    background: #516a34;
+    color: #e5ca78;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.status {
+    font-size: 1rem;
+    color: #3a531f;
+    margin-top: 10px;
+}
+
+/* BUTTON */
+.wrapper {
+    margin: 20px 0;
+}
+
+.btn {
+    background: transparent;
+    color: #3a531f;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #3a531f;
+    border-radius: 40px;
+    cursor: pointer;
+    padding: 10px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #516a34;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #516a34;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #c4e0a1;
+}
+
+tr:nth-child(odd) {
+    background: #aacc83;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    form input {
+        width: 100px;
+    }
+
+    .tree-info, .status-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tree {
+        width: 60px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
